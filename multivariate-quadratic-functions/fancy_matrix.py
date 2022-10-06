@@ -20,7 +20,7 @@ def generate_matrix(n, lambda_max, lambda_min):
 
     L = np.diag(eigs)              # matrix containing eigenvalues
 
-    Q = Q @ L @ np.transpose(Q)
+    Q = Q @ L @ Q.T
 
 
     x = 2 * np.abs(1) * np.random.rand(n, 1) - np.abs(1)
